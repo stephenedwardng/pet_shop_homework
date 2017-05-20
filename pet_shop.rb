@@ -58,11 +58,27 @@ def remove_pet_by_name(pet_shop, pet_name)
     # if name found then delete
     if pet[:name] == pet_name
       pet.delete(:name)
-      # question for 1 to 1
+      # question for 1 to 1 with tutor
       # how do I delete the entire :pets element of Arthur?
     end
-
   end
 
 end
 
+def add_pet_to_stock(pet_shop, new_pet)
+
+  # add hash new_pet to pet_shop pets
+  pet_shop[:pets] << new_pet
+
+end
+
+def customer_pet_count(customers)
+  # count customers pets
+  return customers[:pets].count()
+
+end
+
+def add_pet_to_customer(customer, new_pet)
+  # add new pet to array 'customer' (specified at index 0 in test)
+  customer[:pets] << new_pet
+end
